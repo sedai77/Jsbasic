@@ -24,14 +24,13 @@ $( document ).ready(function () {
   var html = "";
 
   $.each(videos, function (key, value) {
-
+    html += "<div id='movie'>"
     html += "<div class=\"movie-image\"> <img src=\"tile.png\" width=\"300px\"> </div>";
     html += "<div class=\"movie-title\"> <h2><button onclick='goToDetailspage(value)'>"+value.name+"</button></h2> </div>";
     html += "<div class=\"movie-desc\"> <p>"+value.desc+"</p> </div>";
-
-    document.getElementById("movie").innerHTML = html;
-
+    html += "</div>"
   })
+  document.getElementById("movies").innerHTML = html;
 
 })
 
